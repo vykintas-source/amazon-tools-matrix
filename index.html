@@ -1,0 +1,1317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Amazon Advertising & Operations Platforms — Vendor Matrix 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..900,0..100&family=IBM+Plex+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --paper: #f4ede2;
+    --paper-edge: #ebe2d3;
+    --ink: #1a1612;
+    --ink-soft: #4a4239;
+    --ink-faint: #8a7f70;
+    --rule: #2a2520;
+    --rule-soft: #c9bfae;
+    --hot: #d33c1c;
+    --hot-deep: #a92a13;
+    --gold: #c98a2b;
+    --green: #3d6e3a;
+    --blue: #2a4d7f;
+    --cell-yes: #2a4530;
+    --cell-no: #6e2b1f;
+    --cell-unknown: #7a6f5d;
+    --cell-partial: #8a5a16;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    padding: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "IBM Plex Sans", system-ui, sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    background-image:
+      radial-gradient(circle at 20% 10%, rgba(0,0,0,0.025) 0%, transparent 50%),
+      radial-gradient(circle at 80% 90%, rgba(211,60,28,0.04) 0%, transparent 50%);
+  }
+
+  /* MASTHEAD */
+  .masthead {
+    border-bottom: 2px solid var(--rule);
+    padding: 32px 48px 24px;
+    background: var(--paper);
+  }
+  .mast-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    border-bottom: 1px solid var(--rule-soft);
+    padding-bottom: 12px;
+    margin-bottom: 24px;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--ink-soft);
+  }
+  .mast-top .vol { color: var(--hot); font-weight: 700; }
+  h1 {
+    font-family: "Fraunces", serif;
+    font-variation-settings: "opsz" 144, "SOFT" 0;
+    font-weight: 600;
+    font-size: clamp(40px, 5vw, 72px);
+    line-height: 0.95;
+    letter-spacing: -0.02em;
+    margin: 0 0 16px;
+    color: var(--ink);
+  }
+  h1 .italic {
+    font-style: italic;
+    font-variation-settings: "opsz" 144, "SOFT" 50;
+    color: var(--hot);
+  }
+  .deck {
+    font-family: "Fraunces", serif;
+    font-variation-settings: "opsz" 14;
+    font-size: 20px;
+    line-height: 1.4;
+    color: var(--ink-soft);
+    max-width: 820px;
+    margin: 0;
+    font-weight: 400;
+  }
+  .byline {
+    margin-top: 20px;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--ink-faint);
+  }
+
+  /* CONTAINER */
+  .wrap {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 48px;
+  }
+
+  /* SECTION HEADER */
+  .section {
+    margin: 56px 0;
+  }
+  .section-num {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    color: var(--hot);
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+  .section-head {
+    font-family: "Fraunces", serif;
+    font-variation-settings: "opsz" 60;
+    font-size: 36px;
+    line-height: 1.05;
+    margin: 0 0 8px;
+    letter-spacing: -0.01em;
+    font-weight: 500;
+  }
+  .section-sub {
+    font-family: "IBM Plex Sans", sans-serif;
+    font-size: 14px;
+    color: var(--ink-soft);
+    margin: 0 0 24px;
+    max-width: 720px;
+  }
+  .section-rule {
+    border: 0;
+    border-top: 1px solid var(--rule);
+    margin: 20px 0 28px;
+  }
+
+  /* MCP SPOTLIGHT */
+  .mcp-spotlight {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 40px 48px;
+    margin: 48px -48px 0;
+    position: relative;
+    overflow: hidden;
+  }
+  .mcp-spotlight::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--hot);
+  }
+  .mcp-spotlight .section-num { color: var(--hot); }
+  .mcp-spotlight .section-head { color: var(--paper); }
+  .mcp-spotlight .section-sub { color: rgba(244, 237, 226, 0.7); }
+  .mcp-cards {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+    margin-top: 24px;
+  }
+  @media (max-width: 1100px) {
+    .mcp-cards { grid-template-columns: repeat(2, 1fr); }
+  }
+  .mcp-card {
+    background: rgba(244, 237, 226, 0.06);
+    border: 1px solid rgba(244, 237, 226, 0.15);
+    padding: 20px;
+    transition: background 0.2s;
+  }
+  .mcp-card:hover { background: rgba(244, 237, 226, 0.12); }
+  .mcp-card .name {
+    font-family: "Fraunces", serif;
+    font-variation-settings: "opsz" 40;
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: var(--paper);
+  }
+  .mcp-card .date {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--hot);
+    margin-bottom: 12px;
+  }
+  .mcp-card .detail {
+    font-size: 12px;
+    line-height: 1.5;
+    color: rgba(244, 237, 226, 0.75);
+  }
+  .mcp-card .url {
+    margin-top: 12px;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 10px;
+    color: var(--hot);
+    word-break: break-all;
+  }
+
+  /* SUMMARY TIERS */
+  .tier-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+  }
+  @media (max-width: 1100px) { .tier-grid { grid-template-columns: repeat(2, 1fr); } }
+  .tier-card {
+    border: 1px solid var(--rule-soft);
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.4);
+  }
+  .tier-card .tier-num {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    color: var(--hot);
+    text-transform: uppercase;
+  }
+  .tier-card .tier-name {
+    font-family: "Fraunces", serif;
+    font-variation-settings: "opsz" 40;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 4px 0 12px;
+    line-height: 1.2;
+  }
+  .tier-card .tier-tools {
+    font-size: 12px;
+    line-height: 1.6;
+    color: var(--ink-soft);
+  }
+  .tier-card .tier-tools strong { color: var(--ink); font-weight: 600; }
+
+  /* FILTER BAR */
+  .filter-bar {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+    padding: 16px;
+    background: rgba(255, 255, 255, 0.5);
+    border: 1px solid var(--rule-soft);
+  }
+  .filter-bar .label {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--ink-soft);
+    align-self: center;
+    margin-right: 8px;
+  }
+  .filter-btn {
+    background: transparent;
+    border: 1px solid var(--rule-soft);
+    padding: 6px 12px;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    color: var(--ink-soft);
+    transition: all 0.15s;
+  }
+  .filter-btn:hover { background: var(--paper-edge); color: var(--ink); }
+  .filter-btn.active {
+    background: var(--ink);
+    color: var(--paper);
+    border-color: var(--ink);
+  }
+  .filter-btn.mcp-filter.active {
+    background: var(--hot);
+    color: var(--paper);
+    border-color: var(--hot);
+  }
+
+  /* MATRIX TABLE */
+  .matrix-wrap {
+    overflow-x: auto;
+    border: 1px solid var(--rule);
+    background: rgba(255, 255, 255, 0.5);
+  }
+  table.matrix {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 12px;
+    min-width: 1800px;
+  }
+  table.matrix th {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 12px 10px;
+    text-align: left;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 500;
+    border-right: 1px solid rgba(244, 237, 226, 0.15);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    cursor: pointer;
+    user-select: none;
+    white-space: nowrap;
+  }
+  table.matrix th:hover { background: var(--hot-deep); }
+  table.matrix th.mcp-col { background: var(--hot); }
+  table.matrix th.mcp-col:hover { background: var(--hot-deep); }
+  table.matrix td {
+    padding: 10px;
+    border-bottom: 1px solid var(--rule-soft);
+    border-right: 1px solid var(--rule-soft);
+    vertical-align: top;
+    line-height: 1.4;
+  }
+  table.matrix td.tool-name {
+    font-family: "Fraunces", serif;
+    font-variation-settings: "opsz" 20;
+    font-weight: 600;
+    font-size: 14px;
+    white-space: nowrap;
+    background: var(--paper-edge);
+    position: sticky;
+    left: 0;
+    z-index: 5;
+  }
+  table.matrix td.tool-name a {
+    color: var(--ink);
+    text-decoration: none;
+    border-bottom: 1px solid var(--ink-faint);
+  }
+  table.matrix td.tool-name a:hover { color: var(--hot); border-color: var(--hot); }
+  table.matrix tr.mcp-row td.tool-name { border-left: 3px solid var(--hot); }
+  table.matrix tr:hover td { background: rgba(0, 0, 0, 0.03); }
+  table.matrix tr.mcp-row:hover td.tool-name { background: var(--paper-edge); }
+
+  .cell-yes { color: var(--cell-yes); font-weight: 600; }
+  .cell-no { color: var(--cell-no); }
+  .cell-unknown { color: var(--cell-unknown); font-style: italic; }
+  .cell-partial { color: var(--cell-partial); font-weight: 500; }
+  .cell-mcp { color: var(--hot); font-weight: 700; }
+  .cell-mono { font-family: "JetBrains Mono", monospace; font-size: 11px; }
+  .badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    background: var(--paper-edge);
+    color: var(--ink-soft);
+    border: 1px solid var(--rule-soft);
+    margin-right: 4px;
+    margin-bottom: 2px;
+    white-space: nowrap;
+  }
+  .badge.hot { background: var(--hot); color: var(--paper); border-color: var(--hot); }
+  .badge.green { background: var(--green); color: var(--paper); border-color: var(--green); }
+  .badge.gold { background: var(--gold); color: var(--paper); border-color: var(--gold); }
+  .badge.blue { background: var(--blue); color: var(--paper); border-color: var(--blue); }
+
+  /* PRICING SECTION */
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+  @media (max-width: 900px) { .pricing-grid { grid-template-columns: 1fr; } }
+  .pricing-card {
+    border-left: 3px solid var(--rule);
+    padding: 20px 24px;
+    background: rgba(255, 255, 255, 0.4);
+  }
+  .pricing-card.public { border-left-color: var(--green); }
+  .pricing-card.quote { border-left-color: var(--gold); }
+  .pricing-card.unknown { border-left-color: var(--ink-faint); }
+  .pricing-card h3 {
+    font-family: "Fraunces", serif;
+    font-variation-settings: "opsz" 40;
+    font-size: 22px;
+    margin: 0 0 4px;
+    font-weight: 500;
+  }
+  .pricing-card .price-status {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--ink-faint);
+    margin-bottom: 12px;
+  }
+  .pricing-card .price-detail {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 12px;
+    color: var(--ink);
+    line-height: 1.6;
+  }
+  .pricing-card.public .price-status { color: var(--green); }
+  .pricing-card.quote .price-status { color: var(--gold); }
+
+  /* FOOTNOTES */
+  .footnotes {
+    margin-top: 64px;
+    padding-top: 24px;
+    border-top: 2px solid var(--rule);
+    font-size: 11px;
+    color: var(--ink-soft);
+    line-height: 1.6;
+  }
+  .footnotes h3 {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--ink);
+    margin: 16px 0 8px;
+  }
+  .footnotes p { margin: 6px 0; }
+  .footnotes code {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    background: var(--paper-edge);
+    padding: 1px 4px;
+  }
+
+  /* LEGEND */
+  .legend {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    padding: 12px 16px;
+    background: rgba(255, 255, 255, 0.5);
+    border: 1px solid var(--rule-soft);
+    margin-bottom: 12px;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+  .legend-item { display: flex; align-items: center; gap: 6px; color: var(--ink-soft); }
+  .swatch {
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+  }
+  .swatch.yes { background: var(--cell-yes); }
+  .swatch.no { background: var(--cell-no); }
+  .swatch.unknown { background: var(--cell-unknown); }
+  .swatch.partial { background: var(--cell-partial); }
+  .swatch.mcp { background: var(--hot); }
+
+  /* HIDDEN STATE */
+  tr.hidden { display: none; }
+
+  /* PRINT */
+  @media print {
+    body { background: white; }
+    .filter-bar { display: none; }
+    .mcp-spotlight { background: #1a1612 !important; -webkit-print-color-adjust: exact; }
+  }
+</style>
+</head>
+<body>
+
+<!-- MASTHEAD -->
+<header class="masthead">
+  <div class="mast-top">
+    <span>AMZ BEES <span class="vol">// VENDOR INTELLIGENCE</span></span>
+    <span>VOL 01 / 22 MAY 2026 / VILNIUS</span>
+  </div>
+  <h1>The Amazon Platform <span class="italic">Matrix.</span></h1>
+  <p class="deck">A verified comparison of 20 advertising, analytics, and operations platforms serving Amazon agencies in 2026. Built around what is publicly confirmable. Speculation is omitted.</p>
+  <p class="byline">A research dossier // 21 vendors // 11 dimensions // 5 with shipped MCP integration</p>
+</header>
+
+<div class="wrap">
+
+  <!-- TIER OVERVIEW -->
+  <section class="section">
+    <div class="section-num">§ 01</div>
+    <h2 class="section-head">The Five Tiers</h2>
+    <p class="section-sub">Platforms grouped by where they sit on the spectrum from read-only data to full-execution control. The tier defines what problem the tool actually solves.</p>
+    <hr class="section-rule" />
+
+    <div class="tier-grid">
+      <div class="tier-card">
+        <div class="tier-num">Tier 1</div>
+        <div class="tier-name">Reporting & Analytics</div>
+        <div class="tier-tools"><strong>MerchantSpring</strong>, Stackline</div>
+      </div>
+      <div class="tier-card">
+        <div class="tier-num">Tier 2</div>
+        <div class="tier-name">Mid-Market PPC (Rules + AI)</div>
+        <div class="tier-tools"><strong>BidX</strong>, Adtomic, Teikametrics, Perpetua, M19, Adspert, Sellozo, Scale Insights</div>
+      </div>
+      <div class="tier-card" style="border-color: var(--hot);">
+        <div class="tier-num">Tier 3</div>
+        <div class="tier-name">Retail-Aware + Agentic (MCP)</div>
+        <div class="tier-tools"><strong>Kapoq</strong>, <strong>SellerMate</strong>, Seller Labs, AdLabs, atom11</div>
+      </div>
+      <div class="tier-card">
+        <div class="tier-num">Tier 4</div>
+        <div class="tier-name">Multi-Marketplace Suites</div>
+        <div class="tier-tools"><strong>Trellis</strong>, Intentwise, Quartile</div>
+      </div>
+      <div class="tier-card">
+        <div class="tier-num">Tier 5</div>
+        <div class="tier-name">Enterprise Operating Systems</div>
+        <div class="tier-tools"><strong>Pacvue</strong>, CommerceIQ, Skai</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MCP SPOTLIGHT -->
+  <section class="mcp-spotlight">
+    <div class="section-num">§ 02 // THE DIFFERENTIATOR</div>
+    <h2 class="section-head">Shipped MCP Integrations</h2>
+    <p class="section-sub">Five platforms now connect Claude or any MCP client directly to Amazon advertising data. The architectural ceiling that defined the category through 2024 is shifting in real time.</p>
+
+    <div class="mcp-cards">
+      <div class="mcp-card">
+        <div class="name">Amazon Ads</div>
+        <div class="date">02 Feb 2026 // Open beta</div>
+        <div class="detail">Official Amazon Ads MCP server. Open beta. Read and write access. Foundation for everything else in this row.</div>
+        <div class="url">advertising.amazon.com</div>
+      </div>
+      <div class="mcp-card">
+        <div class="name">Kapoq</div>
+        <div class="date">Mar 2026 // Live</div>
+        <div class="detail">Agency-purpose-built. Server URL paste into Claude. Admin-once setup for whole team. Cleaned data layer.</div>
+        <div class="url">mcp.kapoq.com/mcp</div>
+      </div>
+      <div class="mcp-card">
+        <div class="name">SellerMate</div>
+        <div class="date">2026 // Free tier</div>
+        <div class="detail">Free forever plan includes MCP. Two-minute setup. Per-user governance and full audit log included.</div>
+        <div class="url">sellermate.ai/product/mcp</div>
+      </div>
+      <div class="mcp-card">
+        <div class="name">Seller Labs</div>
+        <div class="date">2025 // Live</div>
+        <div class="detail">Data hub model. Cleaned SP-API + Ads API data exposed to Claude. Complements optimizers rather than replaces.</div>
+        <div class="url">sellerlabs.com/amazon-mcp</div>
+      </div>
+      <div class="mcp-card">
+        <div class="name">Pacvue</div>
+        <div class="date">14 May 2026 // Report MCP</div>
+        <div class="detail">Enterprise-only. Report MCP shipped first. Execution capabilities in active development. Walled garden by design.</div>
+        <div class="url">pacvue.com</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN MATRIX -->
+  <section class="section">
+    <div class="section-num">§ 03 // THE MASTER MATRIX</div>
+    <h2 class="section-head">All 20 Platforms, All Dimensions</h2>
+    <p class="section-sub">Click any column header to sort. Use the filter buttons to narrow the view. Every cell is verified from primary sources or marked "Unknown". Pricing here is descriptive only; full pricing detail is in section 04.</p>
+    <hr class="section-rule" />
+
+    <div class="filter-bar">
+      <span class="label">Filter:</span>
+      <button class="filter-btn active" data-filter="all">All Tools (20)</button>
+      <button class="filter-btn mcp-filter" data-filter="mcp">MCP Shipped (5)</button>
+      <button class="filter-btn" data-filter="t1">Tier 1 · Reporting</button>
+      <button class="filter-btn" data-filter="t2">Tier 2 · Mid PPC</button>
+      <button class="filter-btn" data-filter="t3">Tier 3 · Retail-Aware</button>
+      <button class="filter-btn" data-filter="t4">Tier 4 · Multi-Suite</button>
+      <button class="filter-btn" data-filter="t5">Tier 5 · Enterprise</button>
+      <button class="filter-btn" data-filter="eu">EU-Based</button>
+    </div>
+
+    <div class="legend">
+      <span class="legend-item"><span class="swatch yes"></span> Yes / Confirmed</span>
+      <span class="legend-item"><span class="swatch no"></span> No / Not available</span>
+      <span class="legend-item"><span class="swatch partial"></span> Partial / Limited</span>
+      <span class="legend-item"><span class="swatch unknown"></span> Unknown / Not verified</span>
+      <span class="legend-item"><span class="swatch mcp"></span> MCP shipped</span>
+    </div>
+
+    <div class="matrix-wrap">
+      <table class="matrix" id="matrix">
+        <thead>
+          <tr>
+            <th data-col="0">Tool</th>
+            <th data-col="1">Tier</th>
+            <th data-col="2">HQ</th>
+            <th data-col="3">Category</th>
+            <th data-col="4">Marketplaces</th>
+            <th data-col="5">Ad Types</th>
+            <th data-col="6">AMC</th>
+            <th data-col="7">DSP</th>
+            <th data-col="8">Retail Signals</th>
+            <th data-col="9">Agency UX</th>
+            <th data-col="10">White-Label</th>
+            <th data-col="11" class="mcp-col">MCP / Claude</th>
+            <th data-col="12">AI Assistant</th>
+            <th data-col="13">Pricing Visibility</th>
+            <th data-col="14">Trial</th>
+            <th data-col="15">URL</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <!-- KAPOQ -->
+          <tr class="mcp-row" data-tier="t3" data-mcp="true" data-eu="false">
+            <td class="tool-name"><a href="https://kapoq.com" target="_blank">Kapoq</a></td>
+            <td><span class="badge">Tier 3</span></td>
+            <td class="cell-mono">Chicago · USA</td>
+            <td>Multi-brand agency OS</td>
+            <td>Amazon, Walmart</td>
+            <td>SP · SB · SD <span class="cell-partial">(DSP roadmap)</span></td>
+            <td class="cell-partial">Growing</td>
+            <td class="cell-partial">Roadmap 2026</td>
+            <td class="cell-yes">Yes · cross-module</td>
+            <td class="cell-yes">Built for agencies</td>
+            <td class="cell-yes">Available</td>
+            <td class="cell-mcp">YES · Mar 2026</td>
+            <td>Internal AI + MCP</td>
+            <td class="cell-unknown">Quote only</td>
+            <td class="cell-yes">30-day free</td>
+            <td class="cell-mono">kapoq.com</td>
+          </tr>
+
+          <!-- SELLERMATE -->
+          <tr class="mcp-row" data-tier="t3" data-mcp="true" data-eu="false">
+            <td class="tool-name"><a href="https://sellermate.ai" target="_blank">SellerMate</a></td>
+            <td><span class="badge">Tier 3</span></td>
+            <td class="cell-mono cell-unknown">Unknown</td>
+            <td>Agentic AI PPC + agency</td>
+            <td>Amazon · US, UK, DE, JP +</td>
+            <td>SP · SB · SD · DSP seats</td>
+            <td class="cell-yes">Yes · all tiers</td>
+            <td class="cell-yes">Yes · seat options</td>
+            <td class="cell-yes">Yes · real-time</td>
+            <td class="cell-yes">Owner/Analyst/Client/WhiteLabel</td>
+            <td class="cell-yes">Yes</td>
+            <td class="cell-mcp">YES · Free tier</td>
+            <td>SellerMate AI Bot</td>
+            <td class="cell-yes">Public tiers</td>
+            <td class="cell-yes">Free forever</td>
+            <td class="cell-mono">sellermate.ai</td>
+          </tr>
+
+          <!-- SELLER LABS -->
+          <tr class="mcp-row" data-tier="t3" data-mcp="true" data-eu="false">
+            <td class="tool-name"><a href="https://sellerlabs.com" target="_blank">Seller Labs</a></td>
+            <td><span class="badge">Tier 3</span></td>
+            <td class="cell-mono">USA</td>
+            <td>Modular toolkit + MCP</td>
+            <td>Amazon</td>
+            <td>SP · SB · SD via Ad Genius</td>
+            <td class="cell-unknown">Unknown</td>
+            <td class="cell-unknown">Unknown</td>
+            <td class="cell-yes">Yes · Profit Genius</td>
+            <td class="cell-partial">Limited · modular</td>
+            <td class="cell-unknown">Unknown</td>
+            <td class="cell-mcp">YES · 2025</td>
+            <td>Via MCP / Data Hub</td>
+            <td class="cell-yes">Public tiers</td>
+            <td class="cell-yes">Free under $30K sales</td>
+            <td class="cell-mono">sellerlabs.com</td>
+          </tr>
+
+          <!-- ADLABS -->
+          <tr data-tier="t3" data-mcp="false" data-eu="false">
+            <td class="tool-name"><a href="https://adlabs.app" target="_blank">AdLabs</a></td>
+            <td><span class="badge">Tier 3</span></td>
+            <td class="cell-mono cell-unknown">USA likely</td>
+            <td>Hybrid PPC + white-label</td>
+            <td>Amazon</td>
+            <td>SP · SB · SD · in-app DSP</td>
+            <td class="cell-yes">Yes · AMC Audiences</td>
+            <td class="cell-yes">Yes · in-app</td>
+            <td class="cell-partial">Brand Analytics</td>
+            <td class="cell-yes">Unlimited seats</td>
+            <td class="cell-yes">Yes</td>
+            <td class="cell-no">No</td>
+            <td>Ask Wizi</td>
+            <td class="cell-yes">Public · % of spend</td>
+            <td class="cell-yes">30-day free</td>
+            <td class="cell-mono">adlabs.app</td>
+          </tr>
+
+          <!-- ATOM11 -->
+          <tr data-tier="t3" data-mcp="false" data-eu="false">
+            <td class="tool-name"><a href="https://atom11.co" target="_blank">atom11</a></td>
+            <td><span class="badge">Tier 3</span></td>
+            <td class="cell-mono cell-unknown">Unknown</td>
+            <td>Amazon-only retail-aware PPC</td>
+            <td>Amazon · multi-region</td>
+            <td>SP · SB · SD</td>
+            <td class="cell-yes">Yes · AMC insights</td>
+            <td class="cell-unknown">Unknown</td>
+            <td class="cell-yes">Deepest · inv + BB + price + rank</td>
+            <td class="cell-yes">Unlimited users</td>
+            <td class="cell-unknown">Unknown</td>
+            <td class="cell-no">No</td>
+            <td>AI root-cause</td>
+            <td class="cell-yes">Public · % of spend</td>
+            <td class="cell-unknown">Unknown</td>
+            <td class="cell-mono">atom11.co</td>
+          </tr>
+
+          <!-- INTENTWISE -->
+          <tr data-tier="t4" data-mcp="false" data-eu="false">
+            <td class="tool-name"><a href="https://intentwise.com" target="_blank">Intentwise</a></td>
+            <td><span class="badge">Tier 4</span></td>
+            <td class="cell-mono">USA + India</td>
+            <td>Data + multi-module</td>
+            <td>Amazon, Walmart, Criteo, Instacart, Target</td>
+            <td>SP · SB · SD · DSP</td>
+            <td class="cell-yes">Deepest of all</td>
+            <td class="cell-yes">Yes</td>
+            <td class="cell-yes">Yes · item profitability</td>
+            <td class="cell-yes">Designed for it</td>
+            <td class="cell-yes">Yes · dashboards</td>
+            <td class="cell-no">No</td>
+            <td>Wizi + Observability</td>
+            <td class="cell-partial">Floors public · custom</td>
+            <td class="cell-yes">14-day free</td>
+            <td class="cell-mono">intentwise.com</td>
+          </tr>
+
+          <!-- PACVUE -->
+          <tr class="mcp-row" data-tier="t5" data-mcp="true" data-eu="false">
+            <td class="tool-name"><a href="https://pacvue.com" target="_blank">Pacvue</a></td>
+            <td><span class="badge">Tier 5</span></td>
+            <td class="cell-mono">Los Angeles · USA</td>
+            <td>Enterprise commerce media OS</td>
+            <td>100+ globally</td>
+            <td>SP · SB · SD · STV · DSP</td>
+            <td class="cell-yes">Yes · AMC Activate</td>
+            <td class="cell-yes">Yes · native</td>
+            <td class="cell-yes">Yes</td>
+            <td class="cell-yes">Enterprise governance</td>
+            <td class="cell-yes">Yes</td>
+            <td class="cell-mcp">YES · 14 May 2026</td>
+            <td>Pacvue Agent (Apr 2026)</td>
+            <td class="cell-no">Quote only</td>
+            <td class="cell-no">Demo only</td>
+            <td class="cell-mono">pacvue.com</td>
+          </tr>
+
+          <!-- TRELLIS -->
+          <tr data-tier="t4" data-mcp="false" data-eu="false">
+            <td class="tool-name"><a href="https://gotrellis.com" target="_blank">Trellis</a></td>
+            <td><span class="badge">Tier 4</span></td>
+            <td class="cell-mono">Ottawa · Canada</td>
+            <td>4P automation</td>
+            <td>Amazon, Walmart, Google Shopping, Shopify</td>
+            <td>SP · SB · SD · DSP</td>
+            <td class="cell-yes">Yes</td>
+            <td class="cell-yes">Yes</td>
+            <td class="cell-partial">Dynamic pricing core</td>
+            <td class="cell-yes">Yes</td>
+            <td class="cell-unknown">Unknown</td>
+            <td class="cell-no">No</td>
+            <td>Internal AI</td>
+            <td class="cell-partial">G2 tiers · likely stale</td>
+            <td class="cell-unknown">Long-term discounts</td>
+            <td class="cell-mono">gotrellis.com</td>
+          </tr>
+
+          <!-- BIDX -->
+          <tr data-tier="t2" data-mcp="false" data-eu="true">
+            <td class="tool-name"><a href="https://bidx.io" target="_blank">BidX</a></td>
+            <td><span class="badge">Tier 2</span></td>
+            <td class="cell-mono"><span class="cell-yes">Germany</span></td>
+            <td>PPC + DSP + AMC</td>
+            <td>Amazon, Walmart</td>
+            <td>SP · SB · SD · DSP</td>
+            <td class="cell-yes">Yes · AMC Audiences</td>
+            <td class="cell-yes">Yes · +15% fee</td>
+            <td class="cell-unknown">Unknown</td>
+            <td class="cell-yes">Yes</td>
+            <td class="cell-unknown">Unknown</td>
+            <td class="cell-no">No</td>
+            <td>Hybrid AI + rules</td>
+            <td class="cell-yes">Public · EUR</td>
+            <td class="cell-partial">3-month paid POC</td>
+            <td class="cell-mono">bidx.io</td>
+          </tr>
+
+          <!-- ADTOMIC -->
+          <tr data-tier="t2" data-mcp="false" data-eu="false">
+            <td class="tool-name"><a href="https://helium10.com" target="_blank">Adtomic</a></td>
+            <td><span class="badge">Tier 2</span></td>
+            <td class="cell-mono">USA · Helium 10</td>
+            <td>PPC inside H10 ecosystem</td>
+            <td>Amazon, Walmart, TikTok Shop</td>
+            <td>SP · SB V4 · SD · STV view</td>
+            <td class="cell-partial">With AMC access</td>
+            <td class="cell-unknown">Unknown</td>
+            <td class="cell-no">Not in bid logic</td>
+            <td class="cell-yes">Enterprise tier</td>
+            <td class="cell-unknown">Unknown</td>
+            <td class="cell-no">No</td>
+            <td>Hybrid AI + rules</td>
+            <td class="cell-yes">Public · subs + 2% spend</td>
+            <td class="cell-partial">7-day Diamond</td>
+            <td class="cell-mono">helium10.com</td>
+          </tr>
+
+          <!-- TEIKAMETRICS -->
+          <tr data-tier="t2" data-mcp="false" data-eu="false">
+            <td class="tool-name"><a href="https://teikametrics.com" target="_blank">Teikametrics</a></td>
+            <td><span class="badge">Tier 2</span></td>
+            <td class="cell-mono">Boston · USA</td>
+            <td>Marketplace optimization (ARI)</td>
+            <td>Amazon, Walmart, TikTok Shop</td>
+            <td>SP · SB · SD · DSP</td>
+            <td class="cell-partial">Adv + Ent plans</td>
+            <td class="cell-yes">Yes</td>
+            <td class="cell-partial">ARI inventory</td>
+            <td class="cell-yes">Yes</td>
+            <td class="cell-unknown">Unknown</td>
+            <td class="cell-no">No</td>
+            <td>ARI AI engine</td>
+            <td class="cell-yes">Public · base + 3% spend</td>
+            <td class="cell-yes">Free trial Essentials</td>
+            <td class="cell-mono">teikametrics.com</td>
+          </tr>
+
+          <!-- PERPETUA -->
+          <tr data-tier="t2" data-mcp="false" data-eu="false">
+            <td class="tool-name"><a href="https://perpetua.io" target="_blank">Perpetua</a></td>
+            <td><span class="badge">Tier 2</span></td>
+            <td class="cell-mono">Toronto · Canada</td>
+            <td>Goal-based AI</td>
+            <td>Amazon, Walmart, others</td>
+            <td>SP · SB · SD · DSP</td>
+            <td class="cell-partial">Limited</td>
+            <td class="cell-yes">Yes</td>
+            <td class="cell-partial">SOV tracking</td>
+            <td class="cell-yes">Yes</td>
+            <td class="cell-unknown">Unknown</td>
+            <td class="cell-no">No</td>
+            <td>AI optimization</td>
+            <td class="cell-partial">Essentials $695/mo</td>
+            <td class="cell-unknown">Unknown</td>
+            <td class="cell-mono">perpetua.io <span class="cell-no">(no API)</span></td>
+          </tr>
+
+          <!-- QUARTILE -->
+          <tr data-tier="t4" data-mcp="false" data-eu="false">
+            <td class="tool-name"><a href="https://quartile.com" target="_blank">Quartile</a></td>
+            <td><span class="badge">Tier 4</span></td>
+            <td class="cell-mono">New York · USA</td>
+            <td>Pure AI bid algorithm</td>
+            <td>Amazon, Walmart, Google, Instacart, Shopify, TikTok</td>
+            <td>SP · SB · SD · DSP</td>
+            <td class="cell-yes">Yes</td>
+            <td class="cell-yes">Yes · +$500/mo</td>
+            <td class="cell-no">Not strong</td>
+            <td class="cell-yes">Strategy managers</td>
+            <td class="cell-partial">Limited</td>
+            <td class="cell-no">No</td>
+            <td>Pure predictive ML</td>
+            <td class="cell-yes">Public · tiered</td>
+            <td class="cell-partial">35% off first 3mo</td>
+            <td class="cell-mono">quartile.com</td>
+          </tr>
+
+          <!-- M19 -->
+          <tr data-tier="t2" data-mcp="false" data-eu="true">
+            <td class="tool-name"><a href="https://m19.com" target="_blank">M19</a></td>
+            <td><span class="badge">Tier 2</span></td>
+            <td class="cell-mono"><span class="cell-yes">France</span></td>
+            <td>Hands-off AI bidding</td>
+            <td>Amazon · multi-region</td>
+            <td>SP · DSP</td>
+            <td class="cell-unknown">Unknown</td>
+            <td class="cell-yes">Yes</td>
+            <td class="cell-partial">Organic rank</td>
+            <td class="cell-yes">Yes</td>
+            <td class="cell-unknown">Unknown</td>
+            <td class="cell-no">No</td>
+            <td>AI bidding only</td>
+            <td class="cell-no">Not public</td>
+            <td class="cell-partial">"24h, no commitment"</td>
+            <td class="cell-mono">m19.com</td>
+          </tr>
+
+          <!-- ADSPERT -->
+          <tr data-tier="t2" data-mcp="false" data-eu="true">
+            <td class="tool-name"><a href="https://adspert.net" target="_blank">Adspert</a></td>
+            <td><span class="badge">Tier 2</span></td>
+            <td class="cell-mono"><span class="cell-yes">Germany · Mirakl</span></td>
+            <td>AI bid optimization · multi-channel</td>
+            <td>Amazon, eBay, Walmart, Google, Bing, 450+ Mirakl</td>
+            <td>SP · cross-channel</td>
+            <td class="cell-unknown">Unknown</td>
+            <td class="cell-unknown">Unknown</td>
+            <td class="cell-no">Not strong</td>
+            <td class="cell-unknown">Unknown</td>
+            <td class="cell-unknown">Unknown</td>
+            <td class="cell-no">No</td>
+            <td>AI bidding only</td>
+            <td class="cell-partial">€99/mo · possibly stale</td>
+            <td class="cell-yes">30-day free</td>
+            <td class="cell-mono">adspert.net</td>
+          </tr>
+
+          <!-- MERCHANTSPRING -->
+          <tr data-tier="t1" data-mcp="false" data-eu="false">
+            <td class="tool-name"><a href="https://merchantspring.io" target="_blank">MerchantSpring</a></td>
+            <td><span class="badge">Tier 1</span></td>
+            <td class="cell-mono cell-unknown">Unknown</td>
+            <td>Reporting & analytics only</td>
+            <td>120+ marketplaces (Amazon, Walmart, eBay, Shopify +)</td>
+            <td class="cell-partial">Read-only data</td>
+            <td class="cell-yes">Beta · 5 reports</td>
+            <td class="cell-partial">Read-only data</td>
+            <td class="cell-yes">Yes · alerts</td>
+            <td class="cell-yes">Designed for agencies</td>
+            <td class="cell-yes">Full white-label</td>
+            <td class="cell-no">No</td>
+            <td>AI insights + commentary</td>
+            <td class="cell-yes">Public tiers</td>
+            <td class="cell-yes">14-day free all plans</td>
+            <td class="cell-mono">merchantspring.io</td>
+          </tr>
+
+          <!-- COMMERCEIQ -->
+          <tr data-tier="t5" data-mcp="false" data-eu="false">
+            <td class="tool-name"><a href="https://commerceiq.ai" target="_blank">CommerceIQ</a></td>
+            <td><span class="badge">Tier 5</span></td>
+            <td class="cell-mono">Mountain View · Lowe's subsidiary</td>
+            <td>Enterprise retail AI agents</td>
+            <td>Amazon, Walmart, Target, Criteo</td>
+            <td>Full retail media</td>
+            <td class="cell-unknown">Unknown</td>
+            <td class="cell-yes">Yes</td>
+            <td class="cell-yes">Yes</td>
+            <td class="cell-no">Brand-direct</td>
+            <td class="cell-no">No</td>
+            <td class="cell-no">No</td>
+            <td>AllyAI + 4 AI Agents</td>
+            <td class="cell-no">Quote only</td>
+            <td class="cell-no">Demo only</td>
+            <td class="cell-mono">commerceiq.ai</td>
+          </tr>
+
+          <!-- SKAI -->
+          <tr data-tier="t5" data-mcp="false" data-eu="false">
+            <td class="tool-name"><a href="https://skai.io" target="_blank">Skai</a></td>
+            <td><span class="badge">Tier 5</span></td>
+            <td class="cell-mono">Israel · formerly Kenshoo</td>
+            <td>Enterprise omnichannel</td>
+            <td>80+ platforms · Amazon, Walmart, Google, Meta, TikTok</td>
+            <td>Full</td>
+            <td class="cell-yes">Yes</td>
+            <td class="cell-yes">Yes</td>
+            <td class="cell-yes">Yes</td>
+            <td class="cell-yes">Yes</td>
+            <td class="cell-unknown">Unknown</td>
+            <td class="cell-no">No</td>
+            <td>Proprietary AI</td>
+            <td class="cell-no">Quote only</td>
+            <td class="cell-no">Demo only</td>
+            <td class="cell-mono">skai.io</td>
+          </tr>
+
+          <!-- STACKLINE -->
+          <tr data-tier="t1" data-mcp="false" data-eu="false">
+            <td class="tool-name"><a href="https://stackline.com" target="_blank">Stackline</a></td>
+            <td><span class="badge">Tier 1</span></td>
+            <td class="cell-mono">Seattle · USA</td>
+            <td>Retail intelligence + activation</td>
+            <td>Multiple retailers</td>
+            <td class="cell-partial">Partial</td>
+            <td class="cell-unknown">Unknown</td>
+            <td class="cell-unknown">Unknown</td>
+            <td class="cell-yes">Yes · Atlas</td>
+            <td class="cell-no">Brand-direct</td>
+            <td class="cell-no">No</td>
+            <td class="cell-no">No</td>
+            <td>AI Visibility product</td>
+            <td class="cell-no">Quote only</td>
+            <td class="cell-no">Demo only</td>
+            <td class="cell-mono">stackline.com</td>
+          </tr>
+
+          <!-- SCALE INSIGHTS -->
+          <tr data-tier="t2" data-mcp="false" data-eu="false">
+            <td class="tool-name"><a href="https://scaleinsights.com" target="_blank">Scale Insights</a></td>
+            <td><span class="badge">Tier 2</span></td>
+            <td class="cell-mono cell-unknown">Unknown</td>
+            <td>ASIN-priced PPC automation</td>
+            <td>Amazon</td>
+            <td>SP · others unknown</td>
+            <td class="cell-unknown">Unknown</td>
+            <td class="cell-unknown">Unknown</td>
+            <td class="cell-unknown">Unknown</td>
+            <td class="cell-unknown">Unknown</td>
+            <td class="cell-unknown">Unknown</td>
+            <td class="cell-no">No</td>
+            <td class="cell-unknown">Unknown</td>
+            <td class="cell-partial">ASIN-based per claims</td>
+            <td class="cell-unknown">Unknown</td>
+            <td class="cell-mono">scaleinsights.com</td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- PRICING SECTION -->
+  <section class="section">
+    <div class="section-num">§ 04 // VERIFIED PRICING</div>
+    <h2 class="section-head">What the Public Pricing Actually Says</h2>
+    <p class="section-sub">Only what is publicly confirmable as of May 2026. Color-coded by status. Estimates and projections are deliberately excluded.</p>
+    <hr class="section-rule" />
+
+    <div class="pricing-grid">
+
+      <div class="pricing-card public">
+        <h3>SellerMate</h3>
+        <div class="price-status">Public · All Tiers Visible</div>
+        <div class="price-detail">
+          Free Forever — full reporting + MCP for Claude<br>
+          AI plan — $30/mo<br>
+          Growth — $149/mo OR 1.5% of ad spend (whichever higher)<br>
+          Enterprise — custom
+        </div>
+      </div>
+
+      <div class="pricing-card public">
+        <h3>BidX</h3>
+        <div class="price-status">Public · EUR</div>
+        <div class="price-detail">
+          Self Service Platform — €495/mo + % of connected ad spend<br>
+          Managed Platform — €995/mo + % of connected ad spend<br>
+          Managed Service — €4,995/mo + % of connected ad spend<br>
+          DSP — 15% management fee, min €5K media budget<br>
+          Annual commitment required on all plans
+        </div>
+      </div>
+
+      <div class="pricing-card public">
+        <h3>AdLabs</h3>
+        <div class="price-status">Public · % of Spend</div>
+        <div class="price-detail">
+          Free — for small brands/freelancers<br>
+          Core — 1% of ad spend + $40/mo<br>
+          Enterprise — 2% of ad spend + $40/mo<br>
+          Flat-rate available for advertisers spending >$100K/mo<br>
+          Refund if no payback in 2 weeks
+        </div>
+      </div>
+
+      <div class="pricing-card public">
+        <h3>atom11</h3>
+        <div class="price-status">Public · % of Spend</div>
+        <div class="price-detail">
+          2.5% of ad spend for accounts >$10K/mo<br>
+          1.8% of ad spend for accounts >$100K/mo<br>
+          Unlimited campaigns, ASINs, marketplaces, users at all tiers
+        </div>
+      </div>
+
+      <div class="pricing-card public">
+        <h3>Adtomic / Helium 10</h3>
+        <div class="price-status">Public · Subscription + Spend Fee</div>
+        <div class="price-detail">
+          Platinum — $99–$129/mo (Adtomic NOT included)<br>
+          Diamond — $279/mo annual, $359/mo monthly (Adtomic included)<br>
+          Enterprise — custom (up to 25 accounts)<br>
+          + 2% management fee on ad spend through Adtomic<br>
+          April 2026 price increase, Starter plan retired
+        </div>
+      </div>
+
+      <div class="pricing-card public">
+        <h3>Quartile</h3>
+        <div class="price-status">Public · Tiered + Add-Ons</div>
+        <div class="price-detail">
+          Single channel — $895 to $9,995/mo<br>
+          Additional marketplace — +$500/mo each<br>
+          DSP — +$500/mo<br>
+          35% discount first 3 months for new accounts<br>
+          Min $3K monthly ad spend required
+        </div>
+      </div>
+
+      <div class="pricing-card public">
+        <h3>Teikametrics</h3>
+        <div class="price-status">Public · Threshold-Based</div>
+        <div class="price-detail">
+          Essentials — $149–$179/mo (ad spend up to $10K)<br>
+          Advanced — $1,199–$1,430/mo + 3% of ad spend above $10K<br>
+          Enterprise — custom (3% variable component)<br>
+          Free trial available on Essentials (self-serve)
+        </div>
+      </div>
+
+      <div class="pricing-card public">
+        <h3>Perpetua</h3>
+        <div class="price-status">Public · Entry Tier Only</div>
+        <div class="price-detail">
+          Essentials — $695/mo<br>
+          Growth / Pro / Enterprise — custom<br>
+          Note: No public API per GetApp 2026
+        </div>
+      </div>
+
+      <div class="pricing-card public">
+        <h3>Seller Labs</h3>
+        <div class="price-status">Public · Per-Tool Monthly</div>
+        <div class="price-detail">
+          Ad Genius — $29.99/mo<br>
+          Genius Bundle (Ad + Feedback + Profit) — $49.99/mo<br>
+          Free until $30K in lifetime Amazon sales<br>
+          No ad spend limit on any plan
+        </div>
+      </div>
+
+      <div class="pricing-card public">
+        <h3>MerchantSpring</h3>
+        <div class="price-status">Public · Tiered</div>
+        <div class="price-detail">
+          Seller — $120/mo (12 channels)<br>
+          Vendor — $399/mo (12 channels + vendor)<br>
+          Standard — $499/mo (50 channels)<br>
+          Premier — $1,299/mo (100 channels + white-label)<br>
+          14-day free trial on all plans
+        </div>
+      </div>
+
+      <div class="pricing-card quote">
+        <h3>Intentwise</h3>
+        <div class="price-status">Floors Public · Real Cost Custom</div>
+        <div class="price-detail">
+          Ad Optimizer — starts at $1,000/mo or % of ad spend<br>
+          Explore (AMC) — starts at $1,000/mo<br>
+          Analytics Cloud (IAC) — starts at $1,500/mo<br>
+          Setup fee — $1,500<br>
+          14-day free trial
+        </div>
+      </div>
+
+      <div class="pricing-card quote">
+        <h3>Trellis</h3>
+        <div class="price-status">Public G2 Tiers · Likely Stale</div>
+        <div class="price-detail">
+          Per G2 (October 2024 data):<br>
+          Tier 1 — $199/mo<br>
+          Tier 2 — $299/mo<br>
+          Tier 3 — $499/mo<br>
+          Custom — for sellers above $3M annual revenue<br>
+          Long-term contract discounts available
+        </div>
+      </div>
+
+      <div class="pricing-card quote">
+        <h3>Adspert</h3>
+        <div class="price-status">Old Public Price · Possibly Outdated</div>
+        <div class="price-detail">
+          €99/mo Amazon Package (may be outdated)<br>
+          Current model appears spend-based<br>
+          30-day free trial, no credit card
+        </div>
+      </div>
+
+      <div class="pricing-card unknown">
+        <h3>Kapoq</h3>
+        <div class="price-status">Quote Only</div>
+        <div class="price-detail">
+          Commercial framing: One license, unlimited brands, unlimited users<br>
+          30-day free trial available<br>
+          Actual pricing requires sales conversation
+        </div>
+      </div>
+
+      <div class="pricing-card unknown">
+        <h3>Pacvue</h3>
+        <div class="price-status">Quote Only · Enterprise</div>
+        <div class="price-detail">
+          No public pricing<br>
+          Typically % of ad spend, custom by client<br>
+          Demo only, no self-serve trial
+        </div>
+      </div>
+
+      <div class="pricing-card unknown">
+        <h3>M19</h3>
+        <div class="price-status">Not Public</div>
+        <div class="price-detail">
+          "Goes live in 24h, no commitment" marketing claim<br>
+          Pricing requires direct contact
+        </div>
+      </div>
+
+      <div class="pricing-card unknown">
+        <h3>CommerceIQ</h3>
+        <div class="price-status">Quote Only · Enterprise</div>
+        <div class="price-detail">
+          No public pricing<br>
+          Brand-direct positioning, not agency-tiered<br>
+          Demo only
+        </div>
+      </div>
+
+      <div class="pricing-card unknown">
+        <h3>Skai</h3>
+        <div class="price-status">Quote Only · Enterprise</div>
+        <div class="price-detail">
+          No public pricing<br>
+          Enterprise contracts, 80+ platform coverage<br>
+          Demo only
+        </div>
+      </div>
+
+      <div class="pricing-card unknown">
+        <h3>Stackline</h3>
+        <div class="price-status">Quote Only · Enterprise</div>
+        <div class="price-detail">
+          No public pricing<br>
+          Atlas data product + AI Visibility<br>
+          Brand-direct, not agency-tiered
+        </div>
+      </div>
+
+      <div class="pricing-card unknown">
+        <h3>Scale Insights</h3>
+        <div class="price-status">ASIN-Based per Third-Party Claims</div>
+        <div class="price-detail">
+          Public pricing page not verified for current rates<br>
+          Unique ASIN-based pricing model claimed
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- METHODOLOGY -->
+  <section class="footnotes">
+    <h3>Methodology</h3>
+    <p>Every cell in this matrix is verified from primary vendor sources or marked "Unknown". Pricing comes from official pricing pages where available, G2/Capterra/SoftwareAdvice where vendor pricing is private (clearly marked as possibly stale), or third-party reviews where no other source exists.</p>
+    <p>No cost projections for AMZ Bees at 30 brands are included in this document. Such estimates require quotes from Kapoq, Pacvue, Intentwise, Trellis, M19, CommerceIQ, Skai, and Stackline before any total stack cost can be calculated.</p>
+
+    <h3>MCP Integration Verification</h3>
+    <p>Five tools have shipped MCP servers as of May 22, 2026:</p>
+    <p>· <code>Amazon Ads</code> (official) — open beta since 02 Feb 2026<br>
+    · <code>Seller Labs</code> — Data Hub MCP, live since 2025<br>
+    · <code>Kapoq</code> — live since March 2026 at <code>mcp.kapoq.com/mcp</code><br>
+    · <code>SellerMate</code> — included in free tier in 2026<br>
+    · <code>Pacvue</code> — Report MCP shipped 14 May 2026, execution capabilities in active development</p>
+
+    <h3>Sources</h3>
+    <p>Primary vendor websites, G2 product pages, Capterra, GetApp, SoftwareAdvice, vendor pricing pages, vendor press releases, Amazon Ads developer documentation. Third-party blog content from atom11, SellerApp, SellerMate, AdLabs, and SellerLabs used where they contain factual product comparisons; their competitive positioning is treated with appropriate skepticism.</p>
+
+    <h3>What's Excluded</h3>
+    <p>Tools mentioned in research but not significant enough for inclusion in the matrix: AiHello, RevenueWize, PPC Entourage, PPC Winner, Profit Whales, Sellics (largely sunset), Sellozo, Ad Badger, Adbrew, Daniks.AI. The 4-tool universe is intentionally narrowed to platforms with meaningful current market presence.</p>
+
+    <h3>Last Updated</h3>
+    <p>22 May 2026 · Vilnius · AMZ Bees vendor intelligence series</p>
+  </section>
+
+</div>
+
+<script>
+  // FILTER LOGIC
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const rows = document.querySelectorAll('#matrix tbody tr');
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const filter = btn.dataset.filter;
+
+      rows.forEach(row => {
+        let show = false;
+        if (filter === 'all') show = true;
+        else if (filter === 'mcp') show = row.dataset.mcp === 'true';
+        else if (filter === 'eu') show = row.dataset.eu === 'true';
+        else show = row.dataset.tier === filter;
+        row.classList.toggle('hidden', !show);
+      });
+    });
+  });
+
+  // SORT LOGIC
+  const headers = document.querySelectorAll('#matrix thead th');
+  headers.forEach(th => {
+    th.addEventListener('click', () => {
+      const col = parseInt(th.dataset.col);
+      const tbody = document.querySelector('#matrix tbody');
+      const allRows = Array.from(tbody.querySelectorAll('tr'));
+      const direction = th.dataset.sortDir === 'asc' ? 'desc' : 'asc';
+      th.dataset.sortDir = direction;
+
+      allRows.sort((a, b) => {
+        const aText = a.children[col]?.textContent.trim().toLowerCase() || '';
+        const bText = b.children[col]?.textContent.trim().toLowerCase() || '';
+        if (direction === 'asc') return aText.localeCompare(bText);
+        return bText.localeCompare(aText);
+      });
+
+      allRows.forEach(r => tbody.appendChild(r));
+    });
+  });
+</script>
+
+</body>
+</html>
